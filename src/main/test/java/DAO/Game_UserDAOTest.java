@@ -66,8 +66,4 @@ public class Game_UserDAOTest extends AbstractDAOTest{
         Assert.assertFalse(pl.isEmpty());
         System.out.println(pl.size());
     }
-    @AfterAll
-    static void close_pool(){
-        connectionPool.close();
-    }
 }

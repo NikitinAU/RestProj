@@ -40,7 +40,6 @@ public class AbstractDAOTest {
     @AfterAll
     public static void close() throws SQLException {
         connection.close();
-        //connectionPool.close();
     }
 
     @AfterEach
