@@ -1,6 +1,7 @@
 package DAO;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.junit.AfterClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -39,8 +40,9 @@ public class AbstractDAOTest {
     @AfterAll
     public static void close() throws SQLException {
         connection.close();
-        connectionPool.close();
+        //connectionPool.close();
     }
+
     @AfterEach
     void rollback() throws SQLException {
         connection.rollback();

@@ -3,6 +3,7 @@ package DAO;
 import entity.Game_User;
 import jdk.jfr.Name;
 import org.junit.Assert;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
 
 import java.beans.PropertyVetoException;
@@ -64,5 +65,9 @@ public class Game_UserDAOTest extends AbstractDAOTest{
         List<Game_User> pl = gameUserDAO.readByGame(3);
         Assert.assertFalse(pl.isEmpty());
         System.out.println(pl.size());
+    }
+    @AfterAll
+    static void close_pool(){
+        connectionPool.close();
     }
 }
